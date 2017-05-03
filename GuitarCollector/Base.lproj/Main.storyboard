@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16B2659" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="keW-iS-9gY">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="GuitarCollector" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,124 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Wpt-hY-evZ">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Wpt-hY-evZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="5k7-nx-1df"/>
+                            <constraint firstItem="Wpt-hY-evZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="g2t-sT-Iv5"/>
+                            <constraint firstAttribute="trailing" secondItem="Wpt-hY-evZ" secondAttribute="trailing" id="joA-i0-orY"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Wpt-hY-evZ" secondAttribute="bottom" id="pMh-CL-6uy"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="goc-l8-Z62">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="RXo-Qh-pU5">
+                            <connections>
+                                <segue destination="xcd-Xi-gyD" kind="show" id="0SN-yj-JyG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="Wpt-hY-evZ" id="cyC-uG-j1c"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1076" y="137.18140929535232"/>
+        </scene>
+        <!--Guitar View Controller-->
+        <scene sceneID="G0x-Qt-xav">
+            <objects>
+                <viewController id="xcd-Xi-gyD" customClass="GuitarViewController" customModule="GuitarCollector" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Vkx-NC-PaY"/>
+                        <viewControllerLayoutGuide type="bottom" id="IjA-yI-MOH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Mzt-JJ-Vn1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gibson-gitar-android-apps-jpg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Zph-0d-Jm6">
+                                <rect key="frame" x="47" y="84" width="280" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="2mg-hN-Lr6"/>
+                                    <constraint firstAttribute="height" constant="180" id="Svz-cX-b2f"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Guitar Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eX0-Oo-s5D">
+                                <rect key="frame" x="47.5" y="284" width="280" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NdW-T8-xGn">
+                                <rect key="frame" x="172" y="334" width="30" height="30"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addTapped:" destination="xcd-Xi-gyD" eventType="touchUpInside" id="QbY-vl-uln"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eX0-Oo-s5D" firstAttribute="centerX" secondItem="Mzt-JJ-Vn1" secondAttribute="centerX" id="CV5-wJ-arw"/>
+                            <constraint firstItem="Zph-0d-Jm6" firstAttribute="top" secondItem="Vkx-NC-PaY" secondAttribute="bottom" constant="20" id="JzV-62-vpc"/>
+                            <constraint firstItem="eX0-Oo-s5D" firstAttribute="width" secondItem="Zph-0d-Jm6" secondAttribute="width" id="QQg-wA-69j"/>
+                            <constraint firstItem="eX0-Oo-s5D" firstAttribute="top" secondItem="Zph-0d-Jm6" secondAttribute="bottom" constant="20" id="acg-Xc-d31"/>
+                            <constraint firstItem="NdW-T8-xGn" firstAttribute="centerX" secondItem="Mzt-JJ-Vn1" secondAttribute="centerX" id="b3Y-yl-vz0"/>
+                            <constraint firstItem="NdW-T8-xGn" firstAttribute="top" secondItem="eX0-Oo-s5D" secondAttribute="bottom" constant="20" id="dOs-dh-WND"/>
+                            <constraint firstItem="Zph-0d-Jm6" firstAttribute="centerX" secondItem="Mzt-JJ-Vn1" secondAttribute="centerX" id="hE8-Rn-b3G"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="GvB-55-g1o">
+                        <nil key="title"/>
+                        <rightBarButtonItems>
+                            <barButtonItem style="plain" systemItem="camera" id="o2M-cW-3kf">
+                                <connections>
+                                    <action selector="cameraTapped:" destination="xcd-Xi-gyD" id="zyA-BH-Unq"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Photos" id="egH-Wf-GB6">
+                                <connections>
+                                    <action selector="photosTapped:" destination="xcd-Xi-gyD" id="ASs-A0-Svt"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="guitarImageView" destination="Zph-0d-Jm6" id="1bl-AB-Wqf"/>
+                        <outlet property="guitarNameTextField" destination="eX0-Oo-s5D" id="sfc-03-in4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WZo-QE-aeB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1868" y="143"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="3Gh-cp-3LQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="keW-iS-9gY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ade-K9-6G9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="fky-9F-RhN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MVy-Qu-4nM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="210" y="137"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="gibson-gitar-android-apps-jpg.jpg" width="687" height="400"/>
+    </resources>
 </document>

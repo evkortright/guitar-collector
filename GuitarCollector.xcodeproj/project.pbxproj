@@ -13,6 +13,8 @@
 		B1310BB31EB9402C00CA0B82 /* GuitarCollector.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B1310BB11EB9402C00CA0B82 /* GuitarCollector.xcdatamodeld */; };
 		B1310BB51EB9402C00CA0B82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1310BB41EB9402C00CA0B82 /* Assets.xcassets */; };
 		B1310BB81EB9402C00CA0B82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1310BB61EB9402C00CA0B82 /* LaunchScreen.storyboard */; };
+		B1310BC01EB9446F00CA0B82 /* gibson-gitar-android-apps-jpg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B1310BBF1EB9446F00CA0B82 /* gibson-gitar-android-apps-jpg.jpg */; };
+		B1310BC21EB9454B00CA0B82 /* GuitarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1310BC11EB9454B00CA0B82 /* GuitarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		B1310BB41EB9402C00CA0B82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B1310BB71EB9402C00CA0B82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B1310BB91EB9402C00CA0B82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1310BBF1EB9446F00CA0B82 /* gibson-gitar-android-apps-jpg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "gibson-gitar-android-apps-jpg.jpg"; sourceTree = "<group>"; };
+		B1310BC11EB9454B00CA0B82 /* GuitarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuitarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +60,10 @@
 		B1310BA91EB9402C00CA0B82 /* GuitarCollector */ = {
 			isa = PBXGroup;
 			children = (
+				B1310BBF1EB9446F00CA0B82 /* gibson-gitar-android-apps-jpg.jpg */,
 				B1310BAA1EB9402C00CA0B82 /* AppDelegate.swift */,
 				B1310BAC1EB9402C00CA0B82 /* ViewController.swift */,
+				B1310BC11EB9454B00CA0B82 /* GuitarViewController.swift */,
 				B1310BAE1EB9402C00CA0B82 /* Main.storyboard */,
 				B1310BB41EB9402C00CA0B82 /* Assets.xcassets */,
 				B1310BB61EB9402C00CA0B82 /* LaunchScreen.storyboard */,
@@ -127,6 +133,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1310BB81EB9402C00CA0B82 /* LaunchScreen.storyboard in Resources */,
+				B1310BC01EB9446F00CA0B82 /* gibson-gitar-android-apps-jpg.jpg in Resources */,
 				B1310BB51EB9402C00CA0B82 /* Assets.xcassets in Resources */,
 				B1310BB01EB9402C00CA0B82 /* Main.storyboard in Resources */,
 			);
@@ -139,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1310BC21EB9454B00CA0B82 /* GuitarViewController.swift in Sources */,
 				B1310BAD1EB9402C00CA0B82 /* ViewController.swift in Sources */,
 				B1310BAB1EB9402C00CA0B82 /* AppDelegate.swift in Sources */,
 				B1310BB31EB9402C00CA0B82 /* GuitarCollector.xcdatamodeld in Sources */,
