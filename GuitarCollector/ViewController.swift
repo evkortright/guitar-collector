@@ -36,6 +36,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return guitars.count
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let guitar = guitars[indexPath.row]
+        performSegue(withIdentifier: "guitarSegue", sender: guitar)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let nextVC = segue.destination as! GuitarViewController
+        nextVC.guitar = sender as? Guitar
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         let guitar = guitars[indexPath.row]

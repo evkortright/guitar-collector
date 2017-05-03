@@ -38,7 +38,7 @@
                     <navigationItem key="navigationItem" id="goc-l8-Z62">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="RXo-Qh-pU5">
                             <connections>
-                                <segue destination="xcd-Xi-gyD" kind="show" id="0SN-yj-JyG"/>
+                                <segue destination="xcd-Xi-gyD" kind="show" identifier="guitarSegue" id="0SN-yj-JyG"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -83,6 +83,13 @@
                                     <action selector="addTapped:" destination="xcd-Xi-gyD" eventType="touchUpInside" id="QbY-vl-uln"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aak-M3-BOz">
+                                <rect key="frame" x="165" y="384" width="45" height="30"/>
+                                <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="deleteTapped:" destination="xcd-Xi-gyD" eventType="touchUpInside" id="9Je-uD-426"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -91,8 +98,10 @@
                             <constraint firstItem="eX0-Oo-s5D" firstAttribute="width" secondItem="Zph-0d-Jm6" secondAttribute="width" id="QQg-wA-69j"/>
                             <constraint firstItem="eX0-Oo-s5D" firstAttribute="top" secondItem="Zph-0d-Jm6" secondAttribute="bottom" constant="20" id="acg-Xc-d31"/>
                             <constraint firstItem="NdW-T8-xGn" firstAttribute="centerX" secondItem="Mzt-JJ-Vn1" secondAttribute="centerX" id="b3Y-yl-vz0"/>
+                            <constraint firstItem="aak-M3-BOz" firstAttribute="top" secondItem="NdW-T8-xGn" secondAttribute="bottom" constant="20" id="dMP-Aw-M3i"/>
                             <constraint firstItem="NdW-T8-xGn" firstAttribute="top" secondItem="eX0-Oo-s5D" secondAttribute="bottom" constant="20" id="dOs-dh-WND"/>
                             <constraint firstItem="Zph-0d-Jm6" firstAttribute="centerX" secondItem="Mzt-JJ-Vn1" secondAttribute="centerX" id="hE8-Rn-b3G"/>
+                            <constraint firstItem="aak-M3-BOz" firstAttribute="centerX" secondItem="Mzt-JJ-Vn1" secondAttribute="centerX" id="sDU-iU-pwr"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="GvB-55-g1o">
@@ -111,6 +120,8 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="addUpdateButton" destination="NdW-T8-xGn" id="qtM-1d-PRD"/>
+                        <outlet property="deleteButton" destination="aak-M3-BOz" id="ouf-W4-BfB"/>
                         <outlet property="guitarImageView" destination="Zph-0d-Jm6" id="1bl-AB-Wqf"/>
                         <outlet property="guitarNameTextField" destination="eX0-Oo-s5D" id="sfc-03-in4"/>
                     </connections>
